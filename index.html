@@ -3,48 +3,93 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>StudeeMe</title>
 	<meta charset="utf8">
-	<script src="lib/jquery-2.1.1.min.js"></script>
-	<script src="script.js"></script>
+
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
 	<link rel="stylesheet" href="style.css" />
+	
+	
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANS6RTpi6lkVuCRtofRFQNCVasdrvuTU8"></script>
+	<script src="lib/jquery-2.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
-	<input class="stud" type="text" value="What's you studying?" />
-	<div class="map"></div>
-	<div class="list">
-		<div class="studIntent">
-			<div class="profile">
-				Person
-				<img />
+	<div class=""></div>
+	<div class="container">
+		<div class="map">
+			<div class="col-md-6" id="map-canvas"></div>
+
+			<div class="col-md-6 top">
+
+				<div class="stud-col">
+					<form class="addStud">
+						<ul class="list-group">
+							<li class="list-group-item stud row">
+								<h1>
+									<span class="label label-primary">
+									Stud<i>ee</i>Me
+									</span>
+								</h1>
+								<input class="col-sm-8 stud-input" type="text"
+									   value="What's you studying?" />
+							<!--	<input class="btn btn-primary" type="button" value="Send" />
+							--></li>
+							<li class="list-group-item no-show">
+								<input class="place-input" type="text" value="Where?" />
+							</li>
+
+							<li class="list-group-item no-show">
+								<input class="subject-input" type="text" value="What?" />
+							</li>
+
+							<li class="list-group-item no-show">
+								<input class="time-input" type="time" value="now" />
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
-			<span class="location">
-				6th dorm
-			</span>
-			<span class="time">
-				Today, 18:00 - 20:00
-			</span>
-		
-			<span class="subject" data-subject-id="">
-				Maths
-			</span>
-			<input class="btn sub" type="button" value="Subscribe" />
 		</div>
-		
-		<div class="studIntent">
-			<div class="profile">
-				Person
-				<img />
+		<div class="list">
+			<div class="col-md-4 studIntent proto">
+				<div class="inner">
+					<div class="navbar navbar-inverse profile">
+						<div class="navbar-header">
+								<a class="navbar-brand info-name" data-key="userId">
+								   Person
+								</a>
+							</div>
+							<div class="navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="#" class="sub">
+											Subscribe
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+					</div>
+					<div>
+						<img class="profile-photo img-thumbnail" />
+						<span class="info-subject" data-subject-id="" data-key="subject">
+							Maths
+						</span>
+					</div>
+					<div class="panel-bottom">
+						<span class="info-place" data-key="place">
+							6th dorm
+						</span>
+						<span class="info-time" data-key="time">
+							Today, 18:00 - 20:00
+						</span>
+					</div>
+				</div>
 			</div>
-			<span class="location">
-				7th dorm
-			</span>
-			<span class="time">
-				Tomorrow, 16:00 - 17:00
-			</span>
-			<span class="subject" data-subject-id="">
-				Maths
-			</span>
-			<input type="button" value="Subscribe" />
 		</div>
-		
 	</div>
 </body></html>
